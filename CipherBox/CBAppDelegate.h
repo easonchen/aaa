@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class CBViewController;
+@class CBDetailViewController;
+@class DDMenuController;
 
 @interface CBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) CBViewController *viewController;
+@property (strong, nonatomic) CBDetailViewController *viewController;
+
+@property (strong, nonatomic) DDMenuController *menuController;
 
 @end

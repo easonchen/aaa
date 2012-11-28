@@ -7,21 +7,35 @@
 //
 
 #import "CBAppDelegate.h"
-
-#import "CBViewController.h"
+#import "DDMenuController.h"
+#import "CBDetailViewController.h"
+#import "CBMasterViewController.h"
 
 @implementation CBAppDelegate
+@synthesize menuController = _menuController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[CBViewController alloc] initWithNibName:@"CBViewController_iPhone" bundle:nil];
+        self.viewController = [[CBDetailViewController alloc] initWithNibName:@"CBViewController_iPhone" bundle:nil];
     } else {
-        self.viewController = [[CBViewController alloc] initWithNibName:@"CBViewController_iPad" bundle:nil];
+        self.viewController = [[CBDetailViewController alloc] initWithNibName:@"CBDetailViewController_iPad" bundle:nil];
     }
-    self.window.rootViewController = self.viewController;
+    DDMenuController *menuCon = [[DDMenuController alloc] initWithRootViewController:self.viewController];
+    
+    _menuController = menuCon;
+    
+    CBMasterViewController *leftCon = [[CBMasterViewController alloc] initWithNibName:@"CBMasterViewController" bundle:nil];
+    UINavigationController *leftNavi = [[UINavigationController alloc] initWithRootViewController:leftCon];
+    
+    _menuController.leftViewController = leftNavi;
+
+    
+    
+    self.window.rootViewController = self.menuController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }

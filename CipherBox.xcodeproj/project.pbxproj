@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BCA57AA1665BDFF00C645BE /* CBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA57A91665BDFF00C645BE /* CBLoginView.m */; };
+		9BCA57AC1665BE2100C645BE /* CBLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA57AB1665BE2100C645BE /* CBLoginView.xib */; };
+		9BCA57B21665CA1200C645BE /* cipherbox_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA57B11665CA1200C645BE /* cipherbox_logo.png */; };
+		B63BE0F5166469C1000DD51F /* CBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63BE0F3166469C1000DD51F /* CBMasterViewController.m */; };
+		B63BE0F6166469C1000DD51F /* CBMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */; };
 		B6D92D7516635FAE008B5BD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7416635FAE008B5BD1 /* UIKit.framework */; };
 		B6D92D7716635FAE008B5BD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7616635FAE008B5BD1 /* Foundation.framework */; };
 		B6D92D7916635FAE008B5BD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7816635FAE008B5BD1 /* CoreGraphics.framework */; };
@@ -16,12 +21,24 @@
 		B6D92D8716635FAE008B5BD1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D8616635FAE008B5BD1 /* Default.png */; };
 		B6D92D8916635FAE008B5BD1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D8816635FAE008B5BD1 /* Default@2x.png */; };
 		B6D92D8B16635FAE008B5BD1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D8A16635FAE008B5BD1 /* Default-568h@2x.png */; };
-		B6D92D8E16635FAE008B5BD1 /* CBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D92D8D16635FAE008B5BD1 /* CBViewController.m */; };
-		B6D92D9116635FAE008B5BD1 /* CBViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D8F16635FAE008B5BD1 /* CBViewController_iPhone.xib */; };
-		B6D92D9416635FAE008B5BD1 /* CBViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D9216635FAE008B5BD1 /* CBViewController_iPad.xib */; };
+		B6D92D8E16635FAE008B5BD1 /* CBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D92D8D16635FAE008B5BD1 /* CBDetailViewController.m */; };
+		B6D92D9416635FAE008B5BD1 /* CBDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D9216635FAE008B5BD1 /* CBDetailViewController_iPad.xib */; };
+		B6D92DA31663652C008B5BD1 /* cipherbox_iconHDx2.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92DA21663652C008B5BD1 /* cipherbox_iconHDx2.png */; };
+		B6D92DA516636534008B5BD1 /* cipherbox_iconx2.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92DA416636534008B5BD1 /* cipherbox_iconx2.png */; };
+		B6D92DA71663653D008B5BD1 /* cipherbox_iconHD.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92DA61663653D008B5BD1 /* cipherbox_iconHD.png */; };
+		B6D92DA916636576008B5BD1 /* cipherbox_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D92DA816636576008B5BD1 /* cipherbox_icon.png */; };
+		B6D92DAC16636616008B5BD1 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D92DAB16636616008B5BD1 /* DDMenuController.m */; };
+		B6D92DAE166369FE008B5BD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92DAD166369FE008B5BD1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9BCA57A81665BDFF00C645BE /* CBLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginView.h; sourceTree = "<group>"; };
+		9BCA57A91665BDFF00C645BE /* CBLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginView.m; sourceTree = "<group>"; };
+		9BCA57AB1665BE2100C645BE /* CBLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginView.xib; sourceTree = "<group>"; };
+		9BCA57B11665CA1200C645BE /* cipherbox_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_logo.png; sourceTree = "<group>"; };
+		B63BE0F2166469C1000DD51F /* CBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMasterViewController.h; sourceTree = "<group>"; };
+		B63BE0F3166469C1000DD51F /* CBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMasterViewController.m; sourceTree = "<group>"; };
+		B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBMasterViewController.xib; sourceTree = "<group>"; };
 		B6D92D7016635FAE008B5BD1 /* CipherBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CipherBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D92D7416635FAE008B5BD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B6D92D7616635FAE008B5BD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,10 +52,16 @@
 		B6D92D8616635FAE008B5BD1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B6D92D8816635FAE008B5BD1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B6D92D8A16635FAE008B5BD1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B6D92D8C16635FAE008B5BD1 /* CBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBViewController.h; sourceTree = "<group>"; };
-		B6D92D8D16635FAE008B5BD1 /* CBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBViewController.m; sourceTree = "<group>"; };
-		B6D92D9016635FAE008B5BD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CBViewController_iPhone.xib; sourceTree = "<group>"; };
-		B6D92D9316635FAE008B5BD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CBViewController_iPad.xib; sourceTree = "<group>"; };
+		B6D92D8C16635FAE008B5BD1 /* CBDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBDetailViewController.h; sourceTree = "<group>"; };
+		B6D92D8D16635FAE008B5BD1 /* CBDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBDetailViewController.m; sourceTree = "<group>"; };
+		B6D92D9316635FAE008B5BD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CBDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		B6D92DA21663652C008B5BD1 /* cipherbox_iconHDx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_iconHDx2.png; sourceTree = "<group>"; };
+		B6D92DA416636534008B5BD1 /* cipherbox_iconx2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_iconx2.png; sourceTree = "<group>"; };
+		B6D92DA61663653D008B5BD1 /* cipherbox_iconHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_iconHD.png; sourceTree = "<group>"; };
+		B6D92DA816636576008B5BD1 /* cipherbox_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_icon.png; sourceTree = "<group>"; };
+		B6D92DAA16636615008B5BD1 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		B6D92DAB16636616008B5BD1 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		B6D92DAD166369FE008B5BD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D92DAE166369FE008B5BD1 /* QuartzCore.framework in Frameworks */,
 				B6D92D7516635FAE008B5BD1 /* UIKit.framework in Frameworks */,
 				B6D92D7716635FAE008B5BD1 /* Foundation.framework in Frameworks */,
 				B6D92D7916635FAE008B5BD1 /* CoreGraphics.framework in Frameworks */,
@@ -55,9 +79,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BCA57B31665CBD100C645BE /* ViewsNIB */ = {
+			isa = PBXGroup;
+			children = (
+				B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */,
+				B6D92D9216635FAE008B5BD1 /* CBDetailViewController_iPad.xib */,
+				9BCA57AB1665BE2100C645BE /* CBLoginView.xib */,
+			);
+			name = ViewsNIB;
+			sourceTree = "<group>";
+		};
+		9BF40C8C1664BA0900B74AC0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B6D92DAA16636615008B5BD1 /* DDMenuController.h */,
+				B6D92DAB16636616008B5BD1 /* DDMenuController.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		B6D92D6516635FAD008B5BD1 = {
 			isa = PBXGroup;
 			children = (
+				B6D92DAF16636AEA008B5BD1 /* Resource */,
 				B6D92D7A16635FAE008B5BD1 /* CipherBox */,
 				B6D92D7316635FAE008B5BD1 /* Frameworks */,
 				B6D92D7116635FAE008B5BD1 /* Products */,
@@ -75,6 +119,7 @@
 		B6D92D7316635FAE008B5BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6D92DAD166369FE008B5BD1 /* QuartzCore.framework */,
 				B6D92D7416635FAE008B5BD1 /* UIKit.framework */,
 				B6D92D7616635FAE008B5BD1 /* Foundation.framework */,
 				B6D92D7816635FAE008B5BD1 /* CoreGraphics.framework */,
@@ -85,12 +130,16 @@
 		B6D92D7A16635FAE008B5BD1 /* CipherBox */ = {
 			isa = PBXGroup;
 			children = (
+				B63BE0F2166469C1000DD51F /* CBMasterViewController.h */,
+				B63BE0F3166469C1000DD51F /* CBMasterViewController.m */,
 				B6D92D8316635FAE008B5BD1 /* CBAppDelegate.h */,
 				B6D92D8416635FAE008B5BD1 /* CBAppDelegate.m */,
-				B6D92D8C16635FAE008B5BD1 /* CBViewController.h */,
-				B6D92D8D16635FAE008B5BD1 /* CBViewController.m */,
-				B6D92D8F16635FAE008B5BD1 /* CBViewController_iPhone.xib */,
-				B6D92D9216635FAE008B5BD1 /* CBViewController_iPad.xib */,
+				B6D92D8C16635FAE008B5BD1 /* CBDetailViewController.h */,
+				B6D92D8D16635FAE008B5BD1 /* CBDetailViewController.m */,
+				9BCA57A81665BDFF00C645BE /* CBLoginView.h */,
+				9BCA57A91665BDFF00C645BE /* CBLoginView.m */,
+				9BCA57B31665CBD100C645BE /* ViewsNIB */,
+				9BF40C8C1664BA0900B74AC0 /* Library */,
 				B6D92D7B16635FAE008B5BD1 /* Supporting Files */,
 			);
 			path = CipherBox;
@@ -108,6 +157,18 @@
 				B6D92D8A16635FAE008B5BD1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6D92DAF16636AEA008B5BD1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9BCA57B11665CA1200C645BE /* cipherbox_logo.png */,
+				B6D92DA816636576008B5BD1 /* cipherbox_icon.png */,
+				B6D92DA61663653D008B5BD1 /* cipherbox_iconHD.png */,
+				B6D92DA416636534008B5BD1 /* cipherbox_iconx2.png */,
+				B6D92DA21663652C008B5BD1 /* cipherbox_iconHDx2.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +227,14 @@
 				B6D92D8716635FAE008B5BD1 /* Default.png in Resources */,
 				B6D92D8916635FAE008B5BD1 /* Default@2x.png in Resources */,
 				B6D92D8B16635FAE008B5BD1 /* Default-568h@2x.png in Resources */,
-				B6D92D9116635FAE008B5BD1 /* CBViewController_iPhone.xib in Resources */,
-				B6D92D9416635FAE008B5BD1 /* CBViewController_iPad.xib in Resources */,
+				B6D92D9416635FAE008B5BD1 /* CBDetailViewController_iPad.xib in Resources */,
+				B6D92DA31663652C008B5BD1 /* cipherbox_iconHDx2.png in Resources */,
+				B6D92DA516636534008B5BD1 /* cipherbox_iconx2.png in Resources */,
+				B6D92DA71663653D008B5BD1 /* cipherbox_iconHD.png in Resources */,
+				B6D92DA916636576008B5BD1 /* cipherbox_icon.png in Resources */,
+				B63BE0F6166469C1000DD51F /* CBMasterViewController.xib in Resources */,
+				9BCA57AC1665BE2100C645BE /* CBLoginView.xib in Resources */,
+				9BCA57B21665CA1200C645BE /* cipherbox_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +247,10 @@
 			files = (
 				B6D92D8116635FAE008B5BD1 /* main.m in Sources */,
 				B6D92D8516635FAE008B5BD1 /* CBAppDelegate.m in Sources */,
-				B6D92D8E16635FAE008B5BD1 /* CBViewController.m in Sources */,
+				B6D92D8E16635FAE008B5BD1 /* CBDetailViewController.m in Sources */,
+				B6D92DAC16636616008B5BD1 /* DDMenuController.m in Sources */,
+				B63BE0F5166469C1000DD51F /* CBMasterViewController.m in Sources */,
+				9BCA57AA1665BDFF00C645BE /* CBLoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +265,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B6D92D8F16635FAE008B5BD1 /* CBViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6D92D9016635FAE008B5BD1 /* en */,
-			);
-			name = CBViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		B6D92D9216635FAE008B5BD1 /* CBViewController_iPad.xib */ = {
+		B6D92D9216635FAE008B5BD1 /* CBDetailViewController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B6D92D9316635FAE008B5BD1 /* en */,
 			);
-			name = CBViewController_iPad.xib;
+			name = CBDetailViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,6 +334,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CipherBox/CipherBox-Prefix.pch";
 				INFOPLIST_FILE = "CipherBox/CipherBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,6 +346,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CipherBox/CipherBox-Prefix.pch";
 				INFOPLIST_FILE = "CipherBox/CipherBox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -307,6 +371,7 @@
 				B6D92D9916635FAE008B5BD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

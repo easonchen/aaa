@@ -7,13 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BCA57AA1665BDFF00C645BE /* CBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA57A91665BDFF00C645BE /* CBLoginView.m */; };
-		9BCA57AC1665BE2100C645BE /* CBLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA57AB1665BE2100C645BE /* CBLoginView.xib */; };
+		9BB8470E16671AA100BEC22B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8470D16671AA100BEC22B /* CoreData.framework */; };
+		9BB8471016671AB400BEC22B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8470F16671AB400BEC22B /* Security.framework */; };
+		9BB8471216671AC300BEC22B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8471116671AC300BEC22B /* AssetsLibrary.framework */; };
+		9BB8472F16671CD000BEC22B /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8472E16671CD000BEC22B /* Box.framework */; };
+		9BB8473C16671D2600BEC22B /* BoxCoreDataStore 2.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473116671D2500BEC22B /* BoxCoreDataStore 2.mom */; };
+		9BB8473D16671D2600BEC22B /* BoxCoreDataStore 3.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473216671D2600BEC22B /* BoxCoreDataStore 3.mom */; };
+		9BB8473E16671D2600BEC22B /* BoxCoreDataStore 4.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473316671D2600BEC22B /* BoxCoreDataStore 4.mom */; };
+		9BB8473F16671D2600BEC22B /* BoxCoreDataStore 5.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473416671D2600BEC22B /* BoxCoreDataStore 5.mom */; };
+		9BB8474016671D2600BEC22B /* BoxCoreDataStore 6.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473516671D2600BEC22B /* BoxCoreDataStore 6.mom */; };
+		9BB8474116671D2600BEC22B /* BoxCoreDataStore 7.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473616671D2600BEC22B /* BoxCoreDataStore 7.mom */; };
+		9BB8474216671D2600BEC22B /* BoxCoreDataStore 8.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473716671D2600BEC22B /* BoxCoreDataStore 8.mom */; };
+		9BB8474316671D2600BEC22B /* BoxCoreDataStore 9.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473816671D2600BEC22B /* BoxCoreDataStore 9.mom */; };
+		9BB8474416671D2600BEC22B /* BoxCoreDataStore 9.omo in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473916671D2600BEC22B /* BoxCoreDataStore 9.omo */; };
+		9BB8474516671D2600BEC22B /* BoxCoreDataStore.mom in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473A16671D2600BEC22B /* BoxCoreDataStore.mom */; };
+		9BB8474616671D2600BEC22B /* VersionInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8473B16671D2600BEC22B /* VersionInfo.plist */; };
+		9BB8474916671FBB00BEC22B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8474816671FBB00BEC22B /* libz.dylib */; };
 		9BCA57B21665CA1200C645BE /* cipherbox_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BCA57B11665CA1200C645BE /* cipherbox_logo.png */; };
+		9BD810CB1665E23C001A27E1 /* CBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD810C91665E23C001A27E1 /* CBLoginViewController.m */; };
+		9BD810CC1665E23C001A27E1 /* CBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BD810CA1665E23C001A27E1 /* CBLoginViewController.xib */; };
+		9BE6B51A166863340035D19D /* CBMasterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6B519166863340035D19D /* CBMasterTableController.m */; };
 		B63BE0F5166469C1000DD51F /* CBMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B63BE0F3166469C1000DD51F /* CBMasterViewController.m */; };
 		B63BE0F6166469C1000DD51F /* CBMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */; };
 		B6D92D7516635FAE008B5BD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7416635FAE008B5BD1 /* UIKit.framework */; };
-		B6D92D7716635FAE008B5BD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7616635FAE008B5BD1 /* Foundation.framework */; };
+		B6D92D7716635FAE008B5BD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7616635FAE008B5BD1 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B6D92D7916635FAE008B5BD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D92D7816635FAE008B5BD1 /* CoreGraphics.framework */; };
 		B6D92D7F16635FAE008B5BD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6D92D7D16635FAE008B5BD1 /* InfoPlist.strings */; };
 		B6D92D8116635FAE008B5BD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D92D8016635FAE008B5BD1 /* main.m */; };
@@ -32,10 +49,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9BCA57A81665BDFF00C645BE /* CBLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginView.h; sourceTree = "<group>"; };
-		9BCA57A91665BDFF00C645BE /* CBLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginView.m; sourceTree = "<group>"; };
-		9BCA57AB1665BE2100C645BE /* CBLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginView.xib; sourceTree = "<group>"; };
+		9BB84707166719A100BEC22B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Box.framework; sourceTree = "<group>"; };
+		9BB8470D16671AA100BEC22B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9BB8470F16671AB400BEC22B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9BB8471116671AC300BEC22B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		9BB8472E16671CD000BEC22B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = "<group>"; };
+		9BB8473116671D2500BEC22B /* BoxCoreDataStore 2.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 2.mom"; sourceTree = "<group>"; };
+		9BB8473216671D2600BEC22B /* BoxCoreDataStore 3.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 3.mom"; sourceTree = "<group>"; };
+		9BB8473316671D2600BEC22B /* BoxCoreDataStore 4.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 4.mom"; sourceTree = "<group>"; };
+		9BB8473416671D2600BEC22B /* BoxCoreDataStore 5.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 5.mom"; sourceTree = "<group>"; };
+		9BB8473516671D2600BEC22B /* BoxCoreDataStore 6.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 6.mom"; sourceTree = "<group>"; };
+		9BB8473616671D2600BEC22B /* BoxCoreDataStore 7.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 7.mom"; sourceTree = "<group>"; };
+		9BB8473716671D2600BEC22B /* BoxCoreDataStore 8.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 8.mom"; sourceTree = "<group>"; };
+		9BB8473816671D2600BEC22B /* BoxCoreDataStore 9.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "BoxCoreDataStore 9.mom"; sourceTree = "<group>"; };
+		9BB8473916671D2600BEC22B /* BoxCoreDataStore 9.omo */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BoxCoreDataStore 9.omo"; sourceTree = "<group>"; };
+		9BB8473A16671D2600BEC22B /* BoxCoreDataStore.mom */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = BoxCoreDataStore.mom; sourceTree = "<group>"; };
+		9BB8473B16671D2600BEC22B /* VersionInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VersionInfo.plist; sourceTree = "<group>"; };
+		9BB8474816671FBB00BEC22B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9BCA57B11665CA1200C645BE /* cipherbox_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cipherbox_logo.png; sourceTree = "<group>"; };
+		9BD810C81665E23C001A27E1 /* CBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginViewController.h; sourceTree = "<group>"; };
+		9BD810C91665E23C001A27E1 /* CBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginViewController.m; sourceTree = "<group>"; };
+		9BD810CA1665E23C001A27E1 /* CBLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBLoginViewController.xib; sourceTree = "<group>"; };
+		9BE6B518166863340035D19D /* CBMasterTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMasterTableController.h; sourceTree = "<group>"; };
+		9BE6B519166863340035D19D /* CBMasterTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMasterTableController.m; sourceTree = "<group>"; };
 		B63BE0F2166469C1000DD51F /* CBMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMasterViewController.h; sourceTree = "<group>"; };
 		B63BE0F3166469C1000DD51F /* CBMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMasterViewController.m; sourceTree = "<group>"; };
 		B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBMasterViewController.xib; sourceTree = "<group>"; };
@@ -69,6 +105,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB8474916671FBB00BEC22B /* libz.dylib in Frameworks */,
+				9BB8472F16671CD000BEC22B /* Box.framework in Frameworks */,
+				9BB8471216671AC300BEC22B /* AssetsLibrary.framework in Frameworks */,
+				9BB8471016671AB400BEC22B /* Security.framework in Frameworks */,
+				9BB8470E16671AA100BEC22B /* CoreData.framework in Frameworks */,
 				B6D92DAE166369FE008B5BD1 /* QuartzCore.framework in Frameworks */,
 				B6D92D7516635FAE008B5BD1 /* UIKit.framework in Frameworks */,
 				B6D92D7716635FAE008B5BD1 /* Foundation.framework in Frameworks */,
@@ -79,12 +120,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BB8473016671D2500BEC22B /* BoxCoreDataStore.momd */ = {
+			isa = PBXGroup;
+			children = (
+				9BB8473116671D2500BEC22B /* BoxCoreDataStore 2.mom */,
+				9BB8473216671D2600BEC22B /* BoxCoreDataStore 3.mom */,
+				9BB8473316671D2600BEC22B /* BoxCoreDataStore 4.mom */,
+				9BB8473416671D2600BEC22B /* BoxCoreDataStore 5.mom */,
+				9BB8473516671D2600BEC22B /* BoxCoreDataStore 6.mom */,
+				9BB8473616671D2600BEC22B /* BoxCoreDataStore 7.mom */,
+				9BB8473716671D2600BEC22B /* BoxCoreDataStore 8.mom */,
+				9BB8473816671D2600BEC22B /* BoxCoreDataStore 9.mom */,
+				9BB8473916671D2600BEC22B /* BoxCoreDataStore 9.omo */,
+				9BB8473A16671D2600BEC22B /* BoxCoreDataStore.mom */,
+				9BB8473B16671D2600BEC22B /* VersionInfo.plist */,
+			);
+			name = BoxCoreDataStore.momd;
+			path = Box.framework/Resources/BoxCoreDataStore.momd;
+			sourceTree = "<group>";
+		};
 		9BCA57B31665CBD100C645BE /* ViewsNIB */ = {
 			isa = PBXGroup;
 			children = (
 				B63BE0F4166469C1000DD51F /* CBMasterViewController.xib */,
 				B6D92D9216635FAE008B5BD1 /* CBDetailViewController_iPad.xib */,
-				9BCA57AB1665BE2100C645BE /* CBLoginView.xib */,
 			);
 			name = ViewsNIB;
 			sourceTree = "<group>";
@@ -103,10 +162,13 @@
 			children = (
 				B6D92DAF16636AEA008B5BD1 /* Resource */,
 				B6D92D7A16635FAE008B5BD1 /* CipherBox */,
+				9BB8473016671D2500BEC22B /* BoxCoreDataStore.momd */,
 				B6D92D7316635FAE008B5BD1 /* Frameworks */,
 				B6D92D7116635FAE008B5BD1 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
+			wrapsLines = 0;
 		};
 		B6D92D7116635FAE008B5BD1 /* Products */ = {
 			isa = PBXGroup;
@@ -119,6 +181,12 @@
 		B6D92D7316635FAE008B5BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BB8474816671FBB00BEC22B /* libz.dylib */,
+				9BB8472E16671CD000BEC22B /* Box.framework */,
+				9BB8471116671AC300BEC22B /* AssetsLibrary.framework */,
+				9BB8470F16671AB400BEC22B /* Security.framework */,
+				9BB8470D16671AA100BEC22B /* CoreData.framework */,
+				9BB84707166719A100BEC22B /* Box.framework */,
 				B6D92DAD166369FE008B5BD1 /* QuartzCore.framework */,
 				B6D92D7416635FAE008B5BD1 /* UIKit.framework */,
 				B6D92D7616635FAE008B5BD1 /* Foundation.framework */,
@@ -136,11 +204,14 @@
 				B6D92D8416635FAE008B5BD1 /* CBAppDelegate.m */,
 				B6D92D8C16635FAE008B5BD1 /* CBDetailViewController.h */,
 				B6D92D8D16635FAE008B5BD1 /* CBDetailViewController.m */,
-				9BCA57A81665BDFF00C645BE /* CBLoginView.h */,
-				9BCA57A91665BDFF00C645BE /* CBLoginView.m */,
 				9BCA57B31665CBD100C645BE /* ViewsNIB */,
 				9BF40C8C1664BA0900B74AC0 /* Library */,
 				B6D92D7B16635FAE008B5BD1 /* Supporting Files */,
+				9BD810C81665E23C001A27E1 /* CBLoginViewController.h */,
+				9BD810C91665E23C001A27E1 /* CBLoginViewController.m */,
+				9BD810CA1665E23C001A27E1 /* CBLoginViewController.xib */,
+				9BE6B518166863340035D19D /* CBMasterTableController.h */,
+				9BE6B519166863340035D19D /* CBMasterTableController.m */,
 			);
 			path = CipherBox;
 			sourceTree = "<group>";
@@ -181,6 +252,7 @@
 				B6D92D6C16635FAE008B5BD1 /* Sources */,
 				B6D92D6D16635FAE008B5BD1 /* Frameworks */,
 				B6D92D6E16635FAE008B5BD1 /* Resources */,
+				9BB8474716671D6C00BEC22B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,12 +305,39 @@
 				B6D92DA71663653D008B5BD1 /* cipherbox_iconHD.png in Resources */,
 				B6D92DA916636576008B5BD1 /* cipherbox_icon.png in Resources */,
 				B63BE0F6166469C1000DD51F /* CBMasterViewController.xib in Resources */,
-				9BCA57AC1665BE2100C645BE /* CBLoginView.xib in Resources */,
 				9BCA57B21665CA1200C645BE /* cipherbox_logo.png in Resources */,
+				9BD810CC1665E23C001A27E1 /* CBLoginViewController.xib in Resources */,
+				9BB8473C16671D2600BEC22B /* BoxCoreDataStore 2.mom in Resources */,
+				9BB8473D16671D2600BEC22B /* BoxCoreDataStore 3.mom in Resources */,
+				9BB8473E16671D2600BEC22B /* BoxCoreDataStore 4.mom in Resources */,
+				9BB8473F16671D2600BEC22B /* BoxCoreDataStore 5.mom in Resources */,
+				9BB8474016671D2600BEC22B /* BoxCoreDataStore 6.mom in Resources */,
+				9BB8474116671D2600BEC22B /* BoxCoreDataStore 7.mom in Resources */,
+				9BB8474216671D2600BEC22B /* BoxCoreDataStore 8.mom in Resources */,
+				9BB8474316671D2600BEC22B /* BoxCoreDataStore 9.mom in Resources */,
+				9BB8474416671D2600BEC22B /* BoxCoreDataStore 9.omo in Resources */,
+				9BB8474516671D2600BEC22B /* BoxCoreDataStore.mom in Resources */,
+				9BB8474616671D2600BEC22B /* VersionInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BB8474716671D6C00BEC22B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\necho \"Copy Box database schema into bundle\"\ncp -fr ./Box.framework/Resources/BoxCoreDataStore.momd \"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/BoxCoreDataStore.momd\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6D92D6C16635FAE008B5BD1 /* Sources */ = {
@@ -250,7 +349,8 @@
 				B6D92D8E16635FAE008B5BD1 /* CBDetailViewController.m in Sources */,
 				B6D92DAC16636616008B5BD1 /* DDMenuController.m in Sources */,
 				B63BE0F5166469C1000DD51F /* CBMasterViewController.m in Sources */,
-				9BCA57AA1665BDFF00C645BE /* CBLoginView.m in Sources */,
+				9BD810CB1665E23C001A27E1 /* CBLoginViewController.m in Sources */,
+				9BE6B51A166863340035D19D /* CBMasterTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +431,16 @@
 		B6D92D9816635FAE008B5BD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CipherBox/CipherBox-Prefix.pch";
 				INFOPLIST_FILE = "CipherBox/CipherBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -343,10 +449,16 @@
 		B6D92D9916635FAE008B5BD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CipherBox/CipherBox-Prefix.pch";
 				INFOPLIST_FILE = "CipherBox/CipherBox-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

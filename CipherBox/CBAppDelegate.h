@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Box/Box.h>
 
 @class CBDetailViewController;
 @class DDMenuController;
@@ -18,5 +19,7 @@
 @property (strong, nonatomic) CBDetailViewController *viewController;
 
 @property (strong, nonatomic) DDMenuController *menuController;
+
+@property (nonatomic, readwrite, retain) BoxID *CipherID;
 
 @end

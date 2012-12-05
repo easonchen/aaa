@@ -1,50 +1,77 @@
 //
-//  CBMasterTableController.m
+//  CBCipherRootViewController.m
 //  CipherBox
 //
-//  Created by Eason Chen on 11/30/12.
+//  Created by Eason Chen on 12/3/12.
 //  Copyright (c) 2012 wada. All rights reserved.
 //
 
+#import "CBCipherRootViewController.h"
 #import "CBMasterTableController.h"
+#import "CBShareViewController.h"
 #import "Box/Box.h"
-//#import "Box/BoxObject.h"
-
-
-@interface CBMasterTableController (){
-	NSMutableArray *visibleChildren;
-	
+@interface CBCipherRootViewController (){
+	BoxObject* myfiles;
+	BoxObject* shared;
 }
 
 @end
 
-@implementation CBMasterTableController
+@implementation CBCipherRootViewController
 
-- (id)initWithFolderID:(BoxID *)folderID{
-	self = [super init];
-	if(self){
-		self.folderID = folderID;
-		self.folder = [Box folderWithID:folderID];
-	}
-	
-	return self;
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
+- (id)initCipherRoot{
+	NSLog(@"init cipher root");
+	self = [super init];
+	if(self){
+		BoxID* rootID = [BoxID numberWithInt:0];
+		self.folderID = rootID;
+		self.folder = [Box folderWithID:rootID];
+		
+		//========= called once, fetch the Cipher Root ID
+		//self.title = @"Loading...";
+		NSLog(@"start fetch cipher root....");
+		[self.folder updateWithCallbacks:^(id<BoxOperationCallbacks> on) {
+			on.after(^(BoxCallbackResponse response) {
+				for(BoxObject* obj in self.folder.children){
+					if([obj.name isEqualToString:@"CipherBox"]){
+						NSLog(@"cipher ID:%@", obj.boxID);
+						self.folderID = obj.boxID;
+						self.folder = [Box folderWithID:obj.boxID];
+						break;
+					}
+				}
+				[self refreshFolderTree];
+				//            [self.tableView reloadData];
+			});
+		}];
+		NSLog(@"wait for cipher ID");
+		
+	}
+	
+	return self	;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.title = @"Loading...";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+	
+//	//========= called once, fetch the Cipher Root ID
+	self.title = @"Loading...";
 
-- (void)viewWillAppear:(BOOL)animated{
-	[super viewWillAppear:animated];
-	[self refrashTableViewSource];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,67 +80,76 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark refresh the folder tree
-- (void)refrashTableViewSource{
-	[self.folder updateWithCallbacks:^(id<BoxOperationCallbacks> on) {
-		on.after(^(BoxCallbackResponse response){
-			self.title = self.folder.name;
-			NSMutableArray *tmp = [[NSMutableArray alloc] init];
+- (void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	
+	[self refreshFolderTree];
 
+}
+
+- (void)refreshFolderTree{
+	if(self.folderID.intValue == 0){
+		return;
+	}
+	
+	[self.folder updateWithCallbacks:^(id<BoxOperationCallbacks> on) {
+        on.after(^(BoxCallbackResponse response) {
+			self.title = self.folder.name;
 			for(BoxObject* obj in self.folder.children){
-				if([obj.name isEqualToString:@"ioh"] && [obj isFolder])
-					continue;
-				
-				if([obj.name hasSuffix:@".ioh"] && [obj isFile])
-					continue;
-				
-				[tmp addObject:obj];
+				if([obj.name hasPrefix:@"My"])
+					myfiles = obj;
+				else if([obj.name hasPrefix:@"Files"]){
+					shared = obj;
+				}
 			}
-			visibleChildren = tmp;
 			
 			[self.tableView reloadData];
-		});
-	}];
-
+        });
+    }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     // Return the number of rows in the section.
-	return [visibleChildren count];
+	if(self.folderID.intValue == 0)
+		return 0;
+	else
+		return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(nil == cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
-    }
-	BoxObject* inst = (BoxObject*)[visibleChildren objectAtIndex:indexPath.row];
-	
-	cell.textLabel.text = inst.name;
-	cell.detailTextLabel.text = inst.subtitle;
-	if([inst isFolder]){
-		if([inst hasCollaboratorsObject])
-			cell.imageView.image = [UIImage imageNamed:@"folder_user_4x"];
-		else
-			cell.imageView.image = [UIImage imageNamed:@"folder_4x"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if(nil == cell){
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
 	}
-	else{
-		cell.imageView.image = [UIImage imageNamed:@"pages_4x"];
-	}	
+	
+	switch (indexPath.row) {
+		case 0:{
+			cell.textLabel.text = myfiles.name;
+			cell.detailTextLabel.text = myfiles.subtitle;
+			cell.imageView.image = [UIImage imageNamed:@"folder_4x"];
+			break;
+		}
+		case 1:{
+			cell.textLabel.text = shared.name;
+			cell.detailTextLabel.text = shared.subtitle;
+			cell.imageView.image = [UIImage imageNamed:@"folder_user_4x"];
+			break;
+		}
+		default:
+			break;
+	}
+    
     // Configure the cell...
     
     return cell;
@@ -162,14 +198,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-	BoxObject *obj = (BoxObject*) [visibleChildren objectAtIndex:indexPath.row];
 	
-	// only handle the folder child for now
-	if(obj.isFolder){
-		CBMasterTableController *next = [[CBMasterTableController alloc] initWithFolderID:obj.boxID];
+	if(indexPath.row == 0){
+		CBMasterTableController *next = [[CBMasterTableController alloc] initWithFolderID:myfiles.boxID];
 		[self.navigationController pushViewController:next animated:YES];
+	}
+	else if(indexPath.row == 1){
+		CBShareViewController *share = [[CBShareViewController alloc] initShareFolder];
+		[self.navigationController pushViewController:share animated:YES];
 	}
 	
 }

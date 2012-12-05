@@ -27,8 +27,8 @@
 #import "DDMenuController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define kMenuFullWidth self.view.bounds.size.width * 0.5
-#define kMenuDisplayedWidth self.view.bounds.size.width * 0.45
+#define kMenuFullWidth 540
+#define kMenuDisplayedWidth 500
 #define kMenuOverlayWidth (self.view.bounds.size.width - kMenuDisplayedWidth)
 #define kMenuBounceOffset 10.0f
 #define kMenuBounceDuration .3f

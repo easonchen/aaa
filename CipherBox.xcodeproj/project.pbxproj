@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B3CCFC7166C5AA900AC475E /* folder_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3CCFC4166C5AA900AC475E /* folder_4x.png */; };
+		9B3CCFC8166C5AA900AC475E /* folder_user_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3CCFC5166C5AA900AC475E /* folder_user_4x.png */; };
+		9B3CCFC9166C5AA900AC475E /* pages_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B3CCFC6166C5AA900AC475E /* pages_4x.png */; };
+		9B3CCFCD166C8AA100AC475E /* CBCipherRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3CCFCC166C8AA100AC475E /* CBCipherRootViewController.m */; };
+		9B3CCFD3166CB0E000AC475E /* CBShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3CCFD2166CB0E000AC475E /* CBShareViewController.m */; };
 		9BB8470E16671AA100BEC22B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8470D16671AA100BEC22B /* CoreData.framework */; };
 		9BB8471016671AB400BEC22B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8470F16671AB400BEC22B /* Security.framework */; };
 		9BB8471216671AC300BEC22B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB8471116671AC300BEC22B /* AssetsLibrary.framework */; };
@@ -49,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B3CCFC4166C5AA900AC475E /* folder_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_4x.png; sourceTree = "<group>"; };
+		9B3CCFC5166C5AA900AC475E /* folder_user_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_user_4x.png; sourceTree = "<group>"; };
+		9B3CCFC6166C5AA900AC475E /* pages_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pages_4x.png; sourceTree = "<group>"; };
+		9B3CCFCB166C8AA100AC475E /* CBCipherRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCipherRootViewController.h; sourceTree = "<group>"; };
+		9B3CCFCC166C8AA100AC475E /* CBCipherRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCipherRootViewController.m; sourceTree = "<group>"; };
+		9B3CCFD1166CB0DF00AC475E /* CBShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShareViewController.h; sourceTree = "<group>"; };
+		9B3CCFD2166CB0E000AC475E /* CBShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBShareViewController.m; sourceTree = "<group>"; };
 		9BB84707166719A100BEC22B /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = ../Box.framework; sourceTree = "<group>"; };
 		9BB8470D16671AA100BEC22B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9BB8470F16671AB400BEC22B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -120,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B3CCFCA166C5ABD00AC475E /* folder icon */ = {
+			isa = PBXGroup;
+			children = (
+				9B3CCFC4166C5AA900AC475E /* folder_4x.png */,
+				9B3CCFC5166C5AA900AC475E /* folder_user_4x.png */,
+				9B3CCFC6166C5AA900AC475E /* pages_4x.png */,
+			);
+			name = "folder icon";
+			sourceTree = "<group>";
+		};
 		9BB8473016671D2500BEC22B /* BoxCoreDataStore.momd */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D92DAF16636AEA008B5BD1 /* Resource */,
-				B6D92D7A16635FAE008B5BD1 /* CipherBox */,
+				B6D92D7A16635FAE008B5BD1 /* Classes */,
 				9BB8473016671D2500BEC22B /* BoxCoreDataStore.momd */,
 				B6D92D7316635FAE008B5BD1 /* Frameworks */,
 				B6D92D7116635FAE008B5BD1 /* Products */,
@@ -195,7 +217,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B6D92D7A16635FAE008B5BD1 /* CipherBox */ = {
+		B6D92D7A16635FAE008B5BD1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				B63BE0F2166469C1000DD51F /* CBMasterViewController.h */,
@@ -212,7 +234,12 @@
 				9BD810CA1665E23C001A27E1 /* CBLoginViewController.xib */,
 				9BE6B518166863340035D19D /* CBMasterTableController.h */,
 				9BE6B519166863340035D19D /* CBMasterTableController.m */,
+				9B3CCFCB166C8AA100AC475E /* CBCipherRootViewController.h */,
+				9B3CCFCC166C8AA100AC475E /* CBCipherRootViewController.m */,
+				9B3CCFD1166CB0DF00AC475E /* CBShareViewController.h */,
+				9B3CCFD2166CB0E000AC475E /* CBShareViewController.m */,
 			);
+			name = Classes;
 			path = CipherBox;
 			sourceTree = "<group>";
 		};
@@ -233,6 +260,7 @@
 		B6D92DAF16636AEA008B5BD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9B3CCFCA166C5ABD00AC475E /* folder icon */,
 				9BCA57B11665CA1200C645BE /* cipherbox_logo.png */,
 				B6D92DA816636576008B5BD1 /* cipherbox_icon.png */,
 				B6D92DA61663653D008B5BD1 /* cipherbox_iconHD.png */,
@@ -318,6 +346,9 @@
 				9BB8474416671D2600BEC22B /* BoxCoreDataStore 9.omo in Resources */,
 				9BB8474516671D2600BEC22B /* BoxCoreDataStore.mom in Resources */,
 				9BB8474616671D2600BEC22B /* VersionInfo.plist in Resources */,
+				9B3CCFC7166C5AA900AC475E /* folder_4x.png in Resources */,
+				9B3CCFC8166C5AA900AC475E /* folder_user_4x.png in Resources */,
+				9B3CCFC9166C5AA900AC475E /* pages_4x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +382,8 @@
 				B63BE0F5166469C1000DD51F /* CBMasterViewController.m in Sources */,
 				9BD810CB1665E23C001A27E1 /* CBLoginViewController.m in Sources */,
 				9BE6B51A166863340035D19D /* CBMasterTableController.m in Sources */,
+				9B3CCFCD166C8AA100AC475E /* CBCipherRootViewController.m in Sources */,
+				9B3CCFD3166CB0E000AC475E /* CBShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

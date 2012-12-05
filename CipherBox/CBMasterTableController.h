@@ -13,11 +13,10 @@
 }
 
 @property (nonatomic, readwrite, retain) BoxID *folderID;
-@property (nonatomic, readwrite, retain) BoxFolder *rootFolder;
-@property (nonatomic, readwrite) BOOL isCipherRoot;
+@property (nonatomic, readwrite, retain) BoxFolder *folder;
 
 - (id)initWithFolderID:(BoxID*)folderID;
-- (id)initWithCipherRoot;
+
 - (void)refrashTableViewSource;
 
 @end

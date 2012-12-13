@@ -7,6 +7,7 @@
 //
 
 #import "CBShareViewController.h"
+#import "CBMasterTableController.h"
 #import "Box/Box.h"
 
 
@@ -78,6 +79,7 @@
 			
 			for(BoxObject* obj in _rootFolder.children){
 				if([obj isFolder] && [obj.hasCollaboratorsObject intValue] > 0 ){
+				
 					//NSLog(@"%@ collaborators:%@ id:%@",obj.name, obj.hasCollaboratorsObject,obj.boxID);
 					// ========== synchronous version =====
 					NSNumber* ownerID = [self getFolderOwner:obj.boxID];
@@ -131,7 +133,7 @@
 	BoxObject* folder = (BoxObject*) [_sharedFolders objectAtIndex:indexPath.row];
 	cell.textLabel.text = folder.name;
 	cell.detailTextLabel.text = folder.subtitle;
-	cell.imageView.image = [UIImage imageNamed:@"folder_user_4x"];
+	cell.imageView.image = [UIImage imageNamed:@"folder_user"];
     
     return cell;
 }
@@ -159,27 +161,21 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];	
+	
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	BoxObject *obj = (BoxObject*) [_sharedFolders objectAtIndex:indexPath.row];
+	
+	// only handle the folder child for now
+	if(obj.isFolder){
+		CBMasterTableController *next = [[CBMasterTableController alloc] initWithFolderID:obj.boxID];
+		[self.navigationController pushViewController:next animated:YES];
+	}
+
 }
 
 #pragma mark - call REST API to get the folder owner
@@ -212,8 +208,6 @@
 	NSDictionary* list = [NSJSONSerialization JSONObjectWithData:oResponseData options:NSJSONReadingAllowFragments error:&err];
 	NSDictionary* owner = [list objectForKey:@"owned_by"];
 	NSNumber* uid = [owner objectForKey:@"id"];
-	
-		 
 	
 	
 	return uid;

@@ -27,7 +27,7 @@
 #import "DDMenuController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define kMenuFullWidth 540
+#define kMenuFullWidth 500
 #define kMenuDisplayedWidth 500
 #define kMenuOverlayWidth (self.view.bounds.size.width - kMenuDisplayedWidth)
 #define kMenuBounceOffset 10.0f
@@ -83,12 +83,24 @@
         [tap setEnabled:NO];
         _tap = tap;
     }
-    
+	
+	// Eason edit: listen Keyboard
+//	[[NSNotificationCenter defaultCenter] addObserver:self
+//										selector:@selector(keyboardWillShow:)
+//										name:UIKeyboardWillShowNotification
+//										object:nil];
+//	
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//										selector:@selector(keyboardWillHide:)
+//										name:UIKeyboardWillHideNotification
+//										object:nil];
+//    
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    _tap = nil;
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+	_tap = nil;
     _pan = nil;
 }
 
@@ -154,6 +166,29 @@
     
 }
 
+#pragma mark - KeyboardNotification
+- (void)keyboardWillShow:(NSNotification *)notification {
+	CGRect start, end;
+	
+	// position before keyboard animation
+	[[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] getValue:&start];
+	// position after keyboard animation
+	[[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&end];
+	
+	double duration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+	int curve = [[[notification userInfo] objectForKey:UIKeyboardAnimationCurveUserInfoKey] intValue];
+	
+	[UIView beginAnimations:@"foo" context:nil];
+	[UIView setAnimationDuration:duration];
+	[UIView setAnimationCurve:curve];
+	self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - end.size.height);
+	[UIView commitAnimations];
+	
+}
+
+- (void) keyboardWillHide:(NSNotification *)notification {
+	
+}
 
 #pragma mark - GestureRecognizers
 

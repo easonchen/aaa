@@ -81,8 +81,6 @@
 			 on.after(^(BoxCallbackResponse response)
 					  {
 						  //[loginBtn setEnabled:YES];
-						  //NSLog(@"user eamil: %@",[[Box user] username]);
-						  //NSLog(@"authtoken: %@", [[Box user] authToken]);
 
 						  [logoutBtn setEnabled:YES];
 						  [logoutBtn setTitle:@"Logout"];

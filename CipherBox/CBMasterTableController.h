@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Box/BoxFolder.h>
+#import "ELCImagePickerController.h"
 
-@interface CBMasterTableController : UITableViewController{
+@interface CBMasterTableController : UITableViewController <ELCImagePickerControllerDelegate,UITextFieldDelegate, UIActionSheetDelegate, UINavigationControllerDelegate>{
 }
 
 @property (nonatomic, readwrite, retain) BoxID *folderID;
@@ -18,5 +19,5 @@
 - (id)initWithFolderID:(BoxID*)folderID;
 
 - (void)refrashTableViewSource;
-
+- (void)confirmCreateFolder:(NSNumber*)resultN;
 @end

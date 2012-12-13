@@ -34,22 +34,13 @@ NSString * const NSURLIsExcludedFromBackupKey = @"NSURLIsExcludedFromBackupKey";
     
     _menuController = menuCon;
     
-    //CBMasterViewController *leftCon = [[CBMasterViewController alloc] initWithNibName:@"CBMasterViewController" bundle:nil];
-	//CBMasterTableController *leftCon = [[CBMasterTableController alloc] initWithCipherRoot];
 	CBCipherRootViewController *leftCon = [[CBCipherRootViewController alloc] initCipherRoot];
     UINavigationController *leftNavi = [[UINavigationController alloc] initWithRootViewController:leftCon];
     
     _menuController.leftViewController = leftNavi;
     
     self.window.rootViewController = self.menuController;
-	
-	// TODO: load cipherFolderID,  check for user logged in and pop-up login window
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//	NSInteger intKey = [defaults integerForKey:@"CipherFolderID"];
-//	self.CipherID = [NSNumber numberWithInt:intKey ];
-//	
-//	NSLog(@"stored number:%@",self.CipherID);
-	
+		
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -69,35 +60,6 @@ NSString * const NSURLIsExcludedFromBackupKey = @"NSURLIsExcludedFromBackupKey";
 							  //[[NSNotificationCenter defaultCenter] postNotificationName:BOX_USER_DID_LOGIN_NOTIFICATION_NAME object:self];
 							  [self.viewController dismissModalViewControllerAnimated:YES];
 							  
-							  // ========= looking for Cipher folder ID........I think this is unneccessory
-//							  
-//							  BoxFolder* rootFolder = [Box rootFolder];
-//							  [rootFolder updateWithCallbacks:^(id<BoxOperationCallbacks> on) {
-//								  on.before(^(BoxCallbackResponse response){
-//									  //NSLog(@"Start retrieve folder tree...");
-//								  });
-//								  on.after(^(BoxCallbackResponse response) {
-//									  for(BoxObject* obj in rootFolder.children){
-//										  BoxFolder* folder = (BoxFolder*)obj;
-//										  //NSLog(@"%@", folder.name);
-//										  
-//										  if([folder.name isEqualToString:@"CipherBox"]){
-//											  //NSLog(@"Cipher ID:%@", folder.boxID);
-//											  self.CipherID = folder.boxID;
-//											  break;
-//										  }
-//									  }
-//									  // write to database
-//									  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//									  [defaults setInteger:[self.CipherID integerValue] forKey:@"CipherFolderID"];
-//									  [defaults synchronize];
-//									  NSLog(@"key %@ stored", self.CipherID);
-//									  
-//									  // TODO: open master view with Cipher root 
-//								  });
-//								  
-//							  }];
-//							  
 							  [self.viewController refreshAuthenticationStatus];
 						  }
 					  });

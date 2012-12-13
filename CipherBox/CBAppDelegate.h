@@ -17,7 +17,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) CBDetailViewController *viewController;
-
 @property (strong, nonatomic) DDMenuController *menuController;
 
 @property (nonatomic, readwrite, retain) BoxID *CipherID;

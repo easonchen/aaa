@@ -137,13 +137,13 @@
 		case 0:{
 			cell.textLabel.text = myfiles.name;
 			cell.detailTextLabel.text = myfiles.subtitle;
-			cell.imageView.image = [UIImage imageNamed:@"folder_4x"];
+			cell.imageView.image = [UIImage imageNamed:@"folder"];
 			break;
 		}
 		case 1:{
 			cell.textLabel.text = shared.name;
 			cell.detailTextLabel.text = shared.subtitle;
-			cell.imageView.image = [UIImage imageNamed:@"folder_user_4x"];
+			cell.imageView.image = [UIImage imageNamed:@"folder_user"];
 			break;
 		}
 		default:
@@ -198,13 +198,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
 	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
 	if(indexPath.row == 0){
